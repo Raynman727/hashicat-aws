@@ -1,12 +1,5 @@
-module "s3_bucket" {
-  source = "https://github.com/Raynman727/terraform-aws-s3-bucket.git"
-
-  bucket = "my-s3-bucket"
+module "s3-bucket" {
+  source  = "app.terraform.io/example-org-087dae/s3-bucket/aws"
+  version = "3.3.0"
   bucket_prefix = "${var.prefix}"
-  acl    = "private"
-
-  versioning = {
-    enabled = true
-  }
-
 }
